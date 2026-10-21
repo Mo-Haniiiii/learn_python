@@ -14,3 +14,9 @@ print ("i love python")
 print (type (10)) #     int 
 print (type ("mohamed"))#   string
 print (True,False) #    bool 
+print (type (10.5)) #    float
+print([1,2,3,4,5]) # list
+print ((1,2,3,4,5)) # tuble
+print ({"one":1,"two":2,"three":3})# dictionary
+# ----------------
+
