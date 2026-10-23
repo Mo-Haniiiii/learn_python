@@ -90,4 +90,18 @@ cc = "mohamed"
 print (cc.ljust(10))
 print (cc.ljust(13,"#"))# full char
 
+#ٍ   replace(old value , new value,count)
+dd="hello one two three one one"
+print (dd.replace("one","1",3))
 
+#           string formatting
+
+name1="mohamed"
+age = 19
+rank= 10
+#print("my name is : "+name1+" "+"my age is : "+age)     #type error
+print("my name is : %s my age is : %d my rank is : %f" % (name1,age,rank))
+#   repalcement
+# %s => string  %d =>number     %f =>float
+print("my name is : {} my age is : {} my rank is : {}".format(name1,age,rank))
+print(f"my name is : {name1} my age is : {age} my rank is : {rank}")
