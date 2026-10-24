@@ -1,19 +1,19 @@
 
-#           Tubels
-#   Tubels iteams are Enclosed is ()
+#           Tupels
+#   Tupels iteams are Enclosed is ()
 #   you con remove the ()
-# list iteams are ordered in index   zero based
-# list iteams cannot change
-# list can contain many date type
-# list can contain many date type
-#   tuble with one element
+# tuples iteams are ordered in index   zero based
+# tuples iteams cannot change
+# tuples can contain many date type
+# tuples can contain many date type
+#   tuple with one element
 tuple1=("mohamed",)
 tuple2="mohamed"
 
 print (type(tuple1))# with ( , ) return tuble without( , ) return str
 print (type(tuple2))
 
-#   len(name tuble) to return the size of tuble
+#   len(name tuple) to return the size of tuble
 #   to repeat the iteams in list,string,tuble --> (*)  
 #   count() to know how many the number repeted
 #   index() to know the index of element
