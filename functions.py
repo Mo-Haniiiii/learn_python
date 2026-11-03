@@ -7,6 +7,9 @@
 #               to build function 
 #   def function name (parmeters or not)
  
+
+
+
 def hellomessage() :  
     return " Hello World "
 print (hellomessage())
@@ -103,5 +106,166 @@ print (type(hello))
 
 print (say_hello.__name__)
 print (hello.__name__)
+
+
+#           built in function
+# all()
+# any()
+# bin()
+# id ()
+# sum(iterable,start) start added to sum 
+# round(number,numofdigits) num of digits -> el rakm el 3ashri
+# range(start ,end, step) end -> egbary
+# print()
+# abs()
+# max()
+# min()
+# pow()
+# slice()
+# enumerate(iterable,start=0)
+# help()
+# reversed
+
+x=[1,2,3,4]
+if all(x):
+    print (" All elements is True ")
+else:
+    print (" There is at least one element is False ")
+
+y=[0,1]
+if any(y):
+    print (" There is at least one element is True")
+else:
+    print (" There is no any True element ")
+
+print (bin(100)) # binary
+
+
+a=1
+print (id(a)) # address 
+
+
+lis=[1,20,9,10]
+print (sum(lis))
+print (sum(lis,5))
+
+print (round(15.499))
+print (round(15.5))
+print (round(15.4994,3))
+
+print (list(range(10))) # from 0 ->9
+print (list(range(0,10,2))) #  even 
+print (list(range(1,10,2))) #  odd 
+
+print (" hello","mohamed","how","are","you",sep=" $ ")
+
+print(abs(100))
+print(abs(-100))
+print(abs(10.19))
+print(abs(-10.19))
+
+print(pow(2,3))#  (2*2*2)
+print(pow(2,3,2))#  (2*2*2)%2
+
+#. x=[1,2,3,4]
+print(min(10,2,0,-18,19))
+print (min(x))
+
+#. x=[1,2,3,4]
+print(max(10,2,0,-18,19))
+print (max(x))
+
+print ("#"*50)
+skills=["cpp","python","html","css"]
+skillscounter=enumerate(skills,1)
+for skill in skillscounter:
+    print (skill)
+
+print ("#"*50)
+tup=(1,2,3,4,5)
+
+print (reversed(tup))
+for num in reversed(tup):
+    print (num)
+
+
+
+
+
+#           map()
+# map take function and iterator
+# map called map because it map the function on every element
+# the function can be pre-defiend function or lambda function
+
+def foramatetext(text):
+    return f"_  {text}  _"
+mytext= ("mohamed","osama","ali")
+myforamatedDate=map(foramatetext,mytext)
+for date in myforamatedDate:
+    print(date)
+
+#   use lambda functoin
+for name in list(map(lambda text : f"- {text} -",mytext)):
+    print (name)
+
+#       filter function
+#   filter take function + iterator
+#   filter run a function on every element 
+#   filter out all elements for which the function return true
+#   filter return a boolean value 
+#   the function can be pre-defiend function or lambda function
+print ("#"*50)
+def checkevennumber(num):
+    if num%2==0 :
+        return num
+
+mynumber=range(0,13)
+res=filter(checkevennumber,mynumber)
+for number in res:
+   print(number)
+
+print ("#"*50)
+def checkname(name):
+    return name.startswith("O")
+
+mylis=["Mohamed","Osama","Ahmed","OOOOOO"]
+ress=filter(checkname,mylis)
+for name in ress:
+    print (name)
+
+print ("#"*50)
+
+
+
+mylis=["Mohamed","Osama","Ahmed","OOOOOO","Mahmoud","Magdey"]
+ress=filter( lambda name: name.startswith("M")  ,mylis)
+for name in ress:
+    print (name)
+
+print ("#"*50)
+
+#       reduce function
+#   reduce take function + iterator
+#   reduce run a function on frist and second element and give result  
+#   then run a function on result and third element and give resultt  
+#   then run a function on resultt and fourth element and give resulttt and so on  
+#   till one element is left and this is the final result of the reduce 
+#   the function can be pre-defiend function or lambda function
+
+from functools import reduce # like libraray
+
+def sumall(num1,num2):
+    return num1+num2
+
+myli=[1,2,3,4,5,6] # (((((1+2)+3)+4)+5)+6)=21
+
+result = reduce(sumall,myli)
+print (result)
+
+print ("#"*50)
+
+names=["Mohamed","hany","Mohamed"]
+re=reduce( lambda name1,name2 : name1+ " " +name2 ,names)
+print (re)
 
 
